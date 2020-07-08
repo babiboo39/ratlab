@@ -51,14 +51,6 @@
     text-decoration: none;
     }
 
-    /* li a:hover:not(.active) {
-    background-color: #ddd;
-    }
-
-    li a.active {
-    color: white;
-    background-color: #4CAF50;
-    } */
     </style>
 </head>
 <body>
