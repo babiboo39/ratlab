@@ -40,7 +40,6 @@
             <input type="text" name="id">
             <input type="submit" name="Submit" value="Submit">
     </form>
-    <a href="search.php" style="text-decoration:none;">search by Id</a>
     <?php
     include("../../config/config.php");
     include("../session.php");
