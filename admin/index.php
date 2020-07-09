@@ -56,7 +56,7 @@
 <body>
 
 <ul>
-  <li><a href="#home">Home</a></li>
+  <li><a href="#">Home</a></li>
   <li><a href="customer/">Customer</a></li>
   <li><a href="#contact">Gallery Product</a></li>
   <li style="float:right"><a href="logout.php">Logout</a></li>
