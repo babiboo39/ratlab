@@ -61,6 +61,19 @@
   <li><a href="#contact">Gallery Product</a></li>
   <li style="float:right"><a href="logout.php">Logout</a></li>
 </ul>
+<h1>Welcome to Admin page</h1>
+<p>
+    <font size="3em">
+        To our tech folks, who currently working on building this system.</br>
+        This is the rough admin page that have been created, this website entirely just contain some function on it. As the new employee, 
+        you are responsible to create the other functions needed, to make our service reachable by the customer.
+        Please remember to report about your work by using our Documentation Report function. You can either type your report or upload the report in the document format.
+        <br/>
+        Sincerely,
+        <br/>
+        Allen
+    </font>
+</p>
 
 </body>
 </html>
