@@ -32,7 +32,7 @@
     <ul>
         <li><a href="/admin">Home</a></li>
         <li><a href="#">Customer</a></li>
-        <li><a href="#contact">Gallery Product</a></li>
+        <li><a href="../report/">Report</a></li>
         <li style="float:right"><a href="../logout.php">Logout</a></li>
     </ul>
     <h2>Customer Data</h2>

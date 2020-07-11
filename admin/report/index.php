@@ -53,7 +53,7 @@ $report = mysqli_query($conn, "select * from report order by time");
 
 <ul>
   <li><a href="../">Home</a></li>
-  <li><a href="customer/">Customer</a></li>
+  <li><a href="../customer">Customer</a></li>
   <li><a href="#">Report</a></li>
   <li style="float:right"><a href="../logout.php">Logout</a></li>
 </ul>
