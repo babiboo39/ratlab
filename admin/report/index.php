@@ -1,14 +1,5 @@
-<!DOCTYPE html>
-<html>
 
-<head>
-    <title>Report Bug</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script type="text/javascript" src="../../assets/script.js"></script>
-</head>
-
-<body>
+<!-- <body>
     <form action="" method="post">
         <label for="bug_name">Bug: </label><br>
         <input type="text" name="bugname" id="bug_name" size="30"></input><br><br>
@@ -19,25 +10,51 @@
     </form>
 </body>
 
-</html>
+</html> -->
 <?php
 include("../session.php");
 include("../../config/config.php");
 
-$bugName = mysqli_real_escape_string($conn, $_REQUEST['bugname']);
-$bugDesc = mysqli_real_escape_string($conn, $_REQUEST['bugdesc']);
-
-$insert = "insert into buglist (bug_name, bug_desc) values ('$bugName', '$bugDesc')";
-$last = "select bug_name, bug_desc from buglist order by id desc limit 1";
-$lastRow = mysqli_fetch_array(mysqli_query($conn, $last), MYSQLI_ASSOC);
-// $result = mysqli_query($conn, $insert) or die ('<pre>'. mysqli_error($conn) . '</pre>');
-if (mysqli_query($conn, $insert)) {
-    echo '<br>Last Reported Bug';
-    echo '<br>Bug Name: ' . $lastRow['bug_name'];
-    echo '<br>Description: ' . $lastRow['bug_desc'];
-} else {
-    echo "error: Could not able to execute $sql." . mysqli_error($conn);
-}
-
-mysqli_close($conn);
+$report = mysqli_query($conn, "select * from report order by time");
 ?>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Report</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="../../assets/script.js"></script>
+    <style>
+    ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #e7e7e7;
+    background-color: #f3f3f3;
+    }
+
+    li {
+    float: left;
+    }
+
+    li a {
+    display: block;
+    color: #666;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    }
+
+    </style>
+</head>
+<body>
+
+<ul>
+  <li><a href="../">Home</a></li>
+  <li><a href="customer/">Customer</a></li>
+  <li><a href="#">Report</a></li>
+  <li style="float:right"><a href="../logout.php">Logout</a></li>
+</ul>
+</body>
