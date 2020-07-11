@@ -10,7 +10,7 @@ $report = mysqli_query($conn, "select * from report order by time");
     <title>Report</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script type="text/javascript" src="../../assets/script.js"></script>
+    <!-- <script type="text/javascript" src="../../assets/script.js"></script> -->
     <style>
     ul {
     list-style-type: none;
