@@ -45,11 +45,11 @@ $report = mysqli_query($conn, "select * from report order by time");
 </ul>
 <h2>Send Report</h2>
 <form action="report.php" method="post">
-    Name   : <input type="text" name="name"><br>
+    Name   : <br><input type="text" name="name"><br>
     Report : <br>
     <textarea name="report" cols="40" rows="5"></textarea>
-    <br>
-    <input type="submit" value="Send Report">
+    <br><br/>
+    <input type="submit" value="Send Report"> or <a href="upload.php">Upload</a> Your Report
 </form>
 
 <h3>Latest Report</h3>
