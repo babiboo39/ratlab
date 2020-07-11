@@ -56,7 +56,7 @@ $report = mysqli_query($conn, "select * from report order by time");
 <?php
 while($row = mysqli_fetch_array($report)) {
     echo "<small>By <b>{$row['name']}</b> on {$row['time']}</small>";
-    echo "<p>{$row['report']}</p>";
+    echo "<p>{$row['reports']}</p>";
     echo "<hr>";
 }
 ?>
