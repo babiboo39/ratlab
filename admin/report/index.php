@@ -8,7 +8,7 @@ $report = mysqli_query($conn, "select * from report order by time");
 <html>
 <head>
     <title>Report</title>
-    <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- <script type="text/javascript" src="../../assets/script.js"></script> -->
     <style>
