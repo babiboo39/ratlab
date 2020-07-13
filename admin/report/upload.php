@@ -1,31 +1,38 @@
 <?php
+
 if (isset($_POST['submit'])) {
 
     $target_dir  = 'files/';
-    $target_path =  $target_dir . basename($_FILES['uploaded']['name']);
+    $target_path = $target_dir . basename($_FILES['file']['name']);
     $uploadOk    = false;
 
-    if(!move_uploaded_file($_FILES['uploaded']['tmp_name'], $pathTarget)) {
-        echo '<pre>Your file was not uploaded</pre>';
+    if (move_uploaded_file($_FILES['file']['tmp_name'], $target_path)) {
+        $uploadOk = true;
     } else {
-        echo "<pre>{$pathTarget} successfully uploaded</pre>";
+        die("Problem uploading file");
     }
 }
+
 ?>
 <!DOCTYPE html>
-<html>
-    <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    </head>
-
-    <body>
-        <form action="" method="post" enctype="multipart/form-data">
-            <p>Choose File:</p>
-            <input type="file" name="file" accept="*"/>
-            <br/>
-            <br/>
-            <input type="submit" name="submit"/>
-        </form>
-    </body>
+<html lang="en">
+<head>
+    <title>Upload Report</title>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+</head>
+<body>
+    <form action="" method="post" enctype="multipart/form-data">
+        <p>Upload Your Report:</p>
+        <input type="file" name="file" />
+        <br />
+        <br />
+        <input type="submit" name="submit" value="Upload"/>
+    </form>
+    <?php
+    if ($uploadOk) {
+        echo "<pre>Upload Success:</pre>";
+        echo "<pre>{$target_path} successfully uploaded</pre>";
+    }
+    ?>
+</body>
 </html>
