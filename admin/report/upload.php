@@ -30,8 +30,7 @@ if (isset($_POST['submit'])) {
     </form>
     <?php
     if ($uploadOk) {
-        echo "<pre>Upload Success:</pre>";
-        echo "<pre>{$target_path} successfully uploaded</pre>";
+        echo "<pre>successfully uploaded {$target_path}</pre>";
     }
     ?>
 </body>
